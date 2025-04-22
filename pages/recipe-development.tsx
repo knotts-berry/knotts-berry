@@ -168,8 +168,8 @@ const RecipeDevelopment: NextPage = () => {
             <p className="mt-3">
               自動返信メールで、パンフレット（展示会で配布したもの）のダウンロードURLを送付いたします。また、折返し電話連絡させていただきます。
               <small>
-                <Link href="privacy-policy">
-                  <a>» 個人情報保護方針</a>
+                <Link href="privacy-policy" className="text-primary-400">
+                  » 個人情報保護方針
                 </Link>
               </small>
             </p>

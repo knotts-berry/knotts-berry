@@ -22,8 +22,8 @@ const Inquiry: NextPage = () => {
           <p className="mt-1 text-sm">
             {' '}
             ※レシピ開発についてのお問合せは、
-            <Link href="recipe-development">
-              <a className="text-primary-400">スフレ レシピ開発</a>
+            <Link href="recipe-development" className="text-primary-400">
+              スフレ レシピ開発
             </Link>{' '}
             よりお問合せください。
           </p>
@@ -42,7 +42,7 @@ const Inquiry: NextPage = () => {
             <p className="mt-3">
               万が一、３営業日以内に返信がない場合は、メールが届いていない可能性がありますので、お手数ですが電話連絡ください。
               <small>
-                <Link href="privacy-policy">» 個人情報保護方針</Link>
+                <Link href="privacy-policy" className="text-primary-400">» 個人情報保護方針</Link>
               </small>
             </p>
             <div className="mail-form text-left">
