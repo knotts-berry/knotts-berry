@@ -4,12 +4,10 @@
 
 ## 技術スタック
 
-⭐️は未使用
-
 * TypeScript
-* ESLint, Prettier
-  * prettier-plugin-tailwindcss: クラス名のソート
-  * eslint-config-prettier: ESLintとPrettierの連携
+* Biome v2
+  * リンターとフォーマッターを統合
+  * インテリジェントなコード整形
 * React 18, Next.js 15
 * PostCSS
   * postcss-import: 外部 CSS 読み込み
@@ -24,24 +22,20 @@
   * @tailwindcss/aspect-ratio: アスペクト比の維持
   * line-clamp: テキストの折り返し (※Tailwind CSS v3のコアに統合済み)
   * preline: Tailwind UI ライブラリ
-* Markdown
-  * remark: Markdown の解析
-  * remark-html: Markdown を HTML にコンパイル
-  * gray-matter: フロントマターを解析
 * Framer Motion: アニメーション
-* next-themes: ダークテーマ用 
+* next-themes: ダークテーマ用
 * データフェッチ
 * テスト
 * ユーティリティ
   * date-fns: 日付の操作
-  * classnames: クラス名を条件付きで結合 
-  * react-scroll: スムーズスクロール 
+  * classnames: クラス名を条件付きで結合
+  * react-scroll: スムーズスクロール
   * react-responsive: レスポンシブデザイン対応
 * コンポーネント
   * @etchteam/next-pagination: ページネーション
-  * @hashicorp/platform-code-highlighting: コードハイライト 
+  * @hashicorp/platform-code-highlighting: コードハイライト
 * 素材
-  * @heroicons/react: アイコンフォント 
+  * @heroicons/react: アイコンフォント
 * Netlify連携
   * @netlify/plugin-nextjs: Netlifyデプロイ用プラグイン
   * netlify-cli: Netlify CLI
@@ -73,6 +67,22 @@
    * メタタグの整理と強化
    * OGP と Twitter カードの改善
 
+## Biome v2 への移行
+
+2025年4月に ESLint/Prettier から Biome v2 への移行を完了しました。主な変更点：
+
+1. **リンターとフォーマッターの統合**
+   * ESLintとPrettierの代わりに単一のツールでコード品質とフォーマットを管理
+   * 設定ファイルの簡素化
+
+2. **パフォーマンス向上**
+   * Rust ベースの高速な実行
+   * インテリジェントなルール適用
+
+3. **開発体験の向上**
+   * 一貫したコードスタイルの適用
+   * シンプルなコマンド体系
+
 ## ディレクトリ構造
 
 ```text
@@ -80,7 +90,6 @@ knotts-berry
 ├── components    # UIコンポーネント
 ├── lib           # ユーティリティ関数
 ├── pages         # ページコンポーネント
-├── posts         # Markdownコンテンツ
 ├── public        # 静的ファイル
 └── styles        # CSSスタイル
 ```
@@ -100,6 +109,9 @@ npm run export
 # リンターの実行
 npm run lint
 
+# リント問題の自動修正
+npm run lint:fix
+
 # コードの自動整形
 npm run format
 
@@ -109,6 +121,7 @@ npm run analyze
 
 ## プロジェクト設定ファイル
 
+* **biome.json**: Biome v2 の設定ファイルで、コードスタイルやリンターのルールを定義します。
 * **renovate.json**: Renovate Botの設定ファイルで、Netlifyでホスティングする際に依存関係を自動的に最新化するために使用されます。このボットはGitHubリポジトリを監視し、依存関係のアップデートがあれば自動的にプルリクエストを作成します。Netlify用の推奨設定が適用されています。
 
 ### 参考にしたサンプル

@@ -1,0 +1,401 @@
+/**
+ *
+ * _app.tsx でインラインで読み込まれるグローバルスタイル
+ * Next.jsは、設定なしでCSSをコンパイル
+ *   - Autoprefixer
+ *   - Cross-browser Flexbox bugs
+ *   - IE11 用 New CSS features Polyfill (※ CSS Grid はコメントでの有効化が必要、Custom Properties は使えない)
+ * package.json の "browserslist" で、対応ブラウザ設定
+ * PostCSS で Tailwind やその他プラグインを使用
+ * @see https://nextjs.org/docs/advanced-features/customizing-postcss-config
+ *
+ */
+
+/**
+ * Tailwind
+ * @see https://github.com/vercel/next.js/tree/canary/examples/with-tailwindcss
+ * @see https://tailwindcss.com/docs/using-with-preprocessors
+ *   @import は冒頭に配置する必要がある。他の CSS ファイルの読み込みができるよう、
+ *   Tailwind のファイルを @tailwind → @import の記述に変えて読み込む
+ */
+@import "tailwindcss/base"; /* @tailwind base; */
+/*@import "./custom-base-styles.css";*/
+
+@import "tailwindcss/components"; /* @tailwind components; */
+/*@import "./custom-components.css";*/
+
+@import "tailwindcss/utilities"; /* @tailwind utilities; */
+/*@import "./custom-utilities.css";*/
+
+/**
+ * import のテスト用
+ */
+@import "./every-layout.css";
+
+/**
+ * @layer に含めない CSS は、コンパイルされた CSS に常に含まれる
+ */
+:root {
+  /**
+   * Custom Properties
+   */
+  --measure: 50rem; /* 80ch */
+  --font-size-small: 0.625rem; /* 10px */
+  --font-size-smaller: 0.875rem; /* 14px */
+  --font-size-base: 1rem; /* 16px */
+  --font-size-biggish: 1.5rem; /* 24px */
+  --font-size-big: 2rem; /* 32px */
+}
+
+/**
+ * @layer ディレクティブ: base, components, utilities
+ * @layer ディレクティブ内の CSS を対応する @tailwind ルールと同じ場所に自動的に移動する
+ *   なので、特異性の問題回避のための順序の考慮が不要
+ *
+ * @apply での指定は、デフォルトで !important が削除される(特異性の問題を回避するため)
+ *   特異性高めたいなら、指定に !important 付ける
+ * よりきれいに見せるためだけに @apply を使用しないこと(ワークフローと保守性の利点を捨てることになる)
+ *   ボタンやフォームコントロールなど、非常に小さく、再利用性の高いものに使用する
+ */
+
+@layer base {
+  /* font-family は、tailwind.config.js の fontFamily で設定 */
+}
+
+@layer components {
+  :root {
+    --btn-padding-x: 1.25em;
+    --btn-padding-y: 0.5em;
+  }
+  .btn-small {
+    --btn-padding-x: 0.6em;
+    --btn-padding-y: 0.25em;
+  }
+  .btn {
+    @apply inline-block px-[var(--btn-padding-x)] py-[var(--btn-padding-y)] transition hover:scale-105;
+  }
+  .btn-primary {
+    @apply bg-primary text-white transition hover:bg-primary-300 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
+  }
+  .btn-outline-primary {
+    @apply border border-primary text-primary transition hover:bg-primary-100 focus:ring-2 focus:ring-primary-400 focus:ring-opacity-75;
+  }
+  .btn-secondary {
+    @apply bg-orange-500 text-white transition hover:bg-orange-700 focus:ring-2 focus:ring-orange-400 focus:ring-opacity-75;
+  }
+  .btn-icon {
+    @apply inline-flex items-center justify-center gap-x-3.5;
+  }
+  .box-alert {
+    @apply rounded-md border border-red-200 bg-red-50 p-4 text-sm text-red-600;
+  }
+}
+
+@layer utilities {
+  /* ユーティリティ */
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  Josh's Custom CSS Reset
+  https://www.joshwcomeau.com/css/custom-css-reset/
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/* // tailwind base で設定
+*, *::before, *::after {
+  box-sizing: border-box;
+}
+* {
+  margin: 0;
+}
+*/
+
+/* // body タグに tailwind クラスで指定
+body {
+  line-height: 1.7;
+  -webkit-font-smoothing: antialiased;
+}
+*/
+
+/** next/image が指定
+img, picture, video, canvas, svg {
+  display: block;
+  max-width: 100%;
+}
+*/
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+#__next {
+  height: 100%;
+  isolation: isolate;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  Base Styles
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+
+/*:root[data-theme="light"] {*/
+/*  !* ライトテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #6750a4;*/
+/*  --theme-bg-color: #625b71;*/
+/*}*/
+/*:root[data-theme="dark"] {*/
+/*  !* ダークテーマで適用するプロパティ値 *!*/
+/*  --theme-font-color: #d0bcff;*/
+/*  --theme-bg-color: red;*/
+/*}*/
+
+/** {*/
+/*  max-inline-size: var(*/
+/*    --measure*/
+/*  ); !* ≒ max-width (方向で変わる)、メジャーは --measure を超えてはならない 2/3 *!*/
+/*}*/
+
+html,
+body,
+div,
+section,
+aside,
+header,
+nav,
+main,
+footer,
+iframe,
+pre {
+  max-inline-size: none;
+}
+
+/*h1,*/
+/*h2,*/
+/*h3,*/
+/*h4,*/
+/*h5,*/
+/*h6,*/
+/*p,*/
+/*ul,*/
+/*figcaption,*/
+/*table,*/
+/*form {*/
+/*  !* table, form は付け加えた *!*/
+/*  margin-inline-start: auto;*/
+/*  margin-inline-end: auto;*/
+/*}*/
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-weight: bold;
+}
+
+/**
+ * General purpose classes
+ */
+.alignwide {
+  --measure: 80rem; /* 100ch */
+}
+.alignfull {
+  --measure: 100vw;
+  margin-right: calc(50% - 50vw);
+  margin-left: calc(50% - 50vw);
+}
+
+.lead {
+  font-size: 1.1rem;
+  font-weight: bold;
+}
+
+/**
+ * レイアウト
+ */
+.cover.site-wrapper {
+  /* .cover も参照 */
+  /*display: flex;*/
+  /*flex-direction: column;*/
+  min-block-size: 100vh;
+  /*noinspection CssInvalidPropertyValue*/
+  min-block-size: 100dvh;
+}
+.site-wrapper > header {
+}
+.site-wrapper > nav {
+}
+.site-wrapper > .wrapper {
+  /*flex: 1;*/
+  /*overflow-x: hidden;*/
+}
+.site-wrapper > footer {
+}
+
+.wrapper {
+}
+
+/* .site-wrapper > .wrapper */
+main {
+}
+main > * {
+  margin-inline-start: 1rem;
+  margin-inline-end: 1rem;
+}
+
+/* - - - - - - - - - - - - - - - - - - - - - - - -
+  メインコンテンツ
+ - - - - - - - - - - - - - - - - - - - - - - - - */
+main h1 {
+  font-size: 2rem;
+}
+main h2 {
+  font-size: 1.75rem;
+}
+main h3 {
+  font-size: 1.5rem;
+}
+main h4 {
+  font-size: 1.25rem;
+}
+main h5 {
+  font-size: 1.1rem;
+}
+main h6 {
+  font-size: 1rem;
+}
+
+main a:not([class*="btn"]) {
+  padding-right: 0.25em;
+  padding-left: 0.25em;
+  /*color: #0070f3;*/
+  text-decoration: underline;
+  text-decoration-style: dotted;
+  text-underline-offset: 2px;
+}
+main a:not([class*="btn"]):hover {
+  /*color: #4892e8;*/
+  text-decoration: underline;
+}
+
+main p + p {
+  margin-top: 1em;
+}
+
+.embed-container {
+  position: relative;
+  max-width: 100%;
+  height: auto;
+  padding-top: 30px;
+  padding-bottom: 56.25%;
+  overflow: hidden;
+}
+
+.embed-container iframe,
+.embed-container object,
+.embed-container embed {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+/**
+ * 未整理
+ */
+body {
+  padding-top: 7px;
+  border-top: 3px solid #653c00;
+  background-image: url("../public/images/souffle/race_line.png"),
+    url("../public/images/souffle/bg_waterdot.png");
+  background-repeat: repeat-x, repeat-x;
+  background-position: top left, top left;
+  background-size: auto 10px, auto;
+}
+
+.breadcrumbs li:not(:first-child)::before {
+  content: "»";
+  display: inline-block;
+  margin-right: 0.5em;
+}
+
+.header-deco {
+  padding-bottom: 15px;
+  background-image: url("../public/images/souffle/illust_flower_water.png");
+  background-repeat: no-repeat;
+  background-size: auto 15px;
+  background-position: center bottom;
+}
+
+.pickup-menu::before {
+  position: absolute;
+  top: -40px;
+  right: 20px;
+  content: "";
+  display: inline-block;
+  width: calc(100px + 8vw);
+  height: calc(75px + 6vw); /* 0.75 */
+  background: url("../public/images/souffle/illust_table.png") no-repeat;
+  background-size: calc(100px + 8vw) calc(75px + 6vw);
+}
+
+.voice::before {
+  position: absolute;
+  top: -40px;
+  left: 20px;
+  content: "";
+  display: inline-block;
+  width: calc(80px + 8vw);
+  height: calc(48px + 4.8vw); /* 0.59911894 */
+  background: url("../public/images/souffle/illust_pot.png") no-repeat;
+  background-size: calc(80px + 8vw) calc(48px + 4.8vw);
+}
+
+.footer-shop-information {
+  background-image: url("../public/images/souffle/race_circle.png");
+  background-repeat: no-repeat;
+  background-position-x: -35%;
+  background-position-y: -75%;
+}
+
+.bg-leaf {
+  background-image: url("../public/images/souffle/illust_leaf_water.png");
+  background-repeat: no-repeat;
+  background-size: 181px 110px;
+  background-position: bottom 10px right 0;
+}
+
+/* ずれた枠線 */
+.image-with-border {
+  position: relative;
+}
+.image-with-border::before {
+  content: "";
+  position: absolute;
+  top: 2px;
+  right: -4px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #c1b199;
+  z-index: 2;
+  border-radius: 8px;
+}
+
+/* フッター */
+.footer-menu {
+  background-image: url("../public/images/souffle/race_line.png");
+  background-repeat: repeat-x;
+  background-size: auto 10px;
+  background-position: center bottom;
+}
