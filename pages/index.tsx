@@ -365,7 +365,9 @@ const Home: NextPage = () => {
                     <div className="hs-tooltip" data-hs-tooltip-trigger="hover">
                       <button
                         type="button"
-                        className="hs-tooltip-toggle mt-2 flex w-full justify-center text-sm font-bold"
+                        className="hs-tooltip-toggle mt-2 flex w-full justify-center text-sm font-bold cursor-pointer"
+                        data-hs-tooltip="true"
+                        aria-label="ドリンクメニューを表示"
                       >
                         » ドリンクメニューを見る
                       </button>
