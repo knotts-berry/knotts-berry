@@ -1,7 +1,7 @@
 import Pagination from '@etchteam/next-pagination';
 import { motion } from 'framer-motion';
 import Link from 'next/link';
-import Date from '../components/date';
+import FormattedDate from '../components/FormattedDate';
 import Layout from '../components/layout';
 import { getSortedPostsData } from '../lib/posts';
 import styles from '../styles/Pagination.module.css';
@@ -40,7 +40,7 @@ const Posts: NextPage<Props> = ({ allPostsData }: Props) => {
                   <Link href={`/posts/${id}`}>{title}</Link>
                 </h2>
                 <p className="text-xs">
-                  <Date dateString={date} />
+                  <FormattedDate dateString={date} />
                 </p>
               </li>
             ))}
