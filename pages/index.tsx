@@ -362,22 +362,22 @@ const Home: NextPage = () => {
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
                     </p>
-                    <div className="hs-tooltip" data-hs-tooltip-trigger="hover">
+                    <div className="group relative inline-block w-full">
                       <button
                         type="button"
-                        className="hs-tooltip-toggle mt-2 flex w-full justify-center text-sm font-bold cursor-pointer"
-                        data-hs-tooltip="true"
+                        className="mt-2 flex w-full justify-center text-sm font-bold cursor-pointer"
                         aria-label="ドリンクメニューを表示"
                       >
                         » ドリンクメニューを見る
                       </button>
                       <div
-                        className="hs-tooltip-content border-1 invisible absolute z-10 inline-block max-w-xs rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
+                        className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-1/2 z-10 mt-2 -translate-x-1/2 transform rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left shadow-md transition-opacity duration-300"
                         role="tooltip"
+                        style={{ minWidth: '280px' }}
                       >
-                        <span className="px-4 pt-4 flex justify-center text-lg font-bold tracking-wider text-primary underline">
+                        <div className="px-4 pt-4 flex justify-center text-lg font-bold tracking-wider text-primary underline">
                           Drink Menu
-                        </span>
+                        </div>
                         <div className="py-3 px-4 text-gray-600">
                           <dl>
                             <dt className="pt-3 font-bold text-secondary-500 first:pt-0">
