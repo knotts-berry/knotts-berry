@@ -371,7 +371,7 @@ const Home: NextPage = () => {
                         » ドリンクメニューを見る
                       </button>
                       <div
-                        className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-1/2 z-10 mt-2 -translate-x-1/2 transform rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left shadow-md transition-opacity duration-300"
+                        className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-1/2 z-10 bottom-full mb-2 -translate-x-1/2 transform rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left shadow-md transition-opacity duration-300"
                         role="tooltip"
                         style={{ minWidth: '280px' }}
                       >
