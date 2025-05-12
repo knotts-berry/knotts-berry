@@ -556,7 +556,7 @@ const Home: NextPage = () => {
               <p className="mt-3 flex justify-center">お客様からいただいた声の一部を紹介します！</p>
 
               <div className="container mx-auto max-w-4xl px-6">
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     ナッツベリーのチーズスフレの大ファンです！
                   </p>
@@ -565,7 +565,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     口に入れた途端、ふわっふわでとろける食感♪
                   </p>
@@ -574,7 +574,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     「熱々で甘さ控えめのスフレ」と「冷たくて甘いクリーム」のバランスが最高。
                   </p>
@@ -584,7 +584,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     ハニーマスタードが絶妙で美味しい「チキンサンド」
                   </p>
@@ -593,7 +593,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     待つこと15分。焼きたてスフレだからこその美味しさがあります。
                   </p>
@@ -602,7 +602,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     ふわふわの食感。口に含むと細かくはぜるように溶けてゆきます♪
                   </p>
@@ -611,7 +611,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     淡く儚い食感なのに、食べ応えもあるスフレ。
                   </p>
@@ -620,7 +620,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     スフレのふわふわ感。濃厚だがしつこくなく、美味しかったです。
                   </p>
@@ -629,7 +629,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     甘さ控えめ、軽い食感がいい。男性でも美味しくいただけました。
                   </p>
@@ -638,7 +638,7 @@ const Home: NextPage = () => {
                   </p>
                 </div>
 
-                <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
+                <div className="voice__article mt-5 rounded-2xl border-4 border-dotted border-primary-200 bg-white/75 p-4">
                   <p className="voice__article__title text-lg font-bold text-secondary">
                     待つこと15分。焼きたてスフレだからこその美味しさがあります。
                   </p>
