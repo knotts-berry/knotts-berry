@@ -4,6 +4,7 @@ import Image from 'next/image';
 import { useEffect, useState } from 'react';
 import { useMediaQuery } from 'react-responsive';
 import FadeIn from '../components/FadeIn';
+import FloatingAnimation from '../components/FloatingAnimation';
 import Layout from '../components/layout';
 
 const Home: NextPage = () => {
@@ -73,13 +74,15 @@ const Home: NextPage = () => {
                 <div className="grid__item">
                   <div className="media--mobile-2col flex flex-col items-center">
                     <FadeIn>
-                      <Image
-                        src="/images/souffle/feature_dough.png"
-                        width={403}
-                        height={333}
-                        alt="スフレ生地へのこだわり"
-                        className="media__img fuwafuwa-a"
-                      />
+                      <FloatingAnimation>
+                        <Image
+                          src="/images/souffle/feature_dough.png"
+                          width={403}
+                          height={333}
+                          alt="スフレ生地へのこだわり"
+                          className="media__img"
+                        />
+                      </FloatingAnimation>
                     </FadeIn>
                     <div className="media__body mt-3">
                       <p className="feature__sholder flex justify-center text-sm text-secondary">
@@ -98,13 +101,15 @@ const Home: NextPage = () => {
                 <div className="grid__item">
                   <div className="media--mobile-2col media--mobile--inverse flex flex-col items-center">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
-                      <Image
-                        src="/images/souffle/feature_bake.png"
-                        width={403}
-                        height={333}
-                        alt="スフレの焼きへのこだわり"
-                        className="media__img fuwafuwa-a"
-                      />
+                      <FloatingAnimation delay={0.4} amount={10}>
+                        <Image
+                          src="/images/souffle/feature_bake.png"
+                          width={403}
+                          height={333}
+                          alt="スフレの焼きへのこだわり"
+                          className="media__img"
+                        />
+                      </FloatingAnimation>
                     </FadeIn>
                     <div className="media__body mt-3">
                       <p className="feature__sholder flex justify-center text-sm text-secondary">
@@ -123,13 +128,15 @@ const Home: NextPage = () => {
                 <div className="grid__item">
                   <div className="media--mobile-2col flex flex-col items-center">
                     <FadeIn delay={isMobile ? 0 : 1}>
-                      <Image
-                        src="/images/souffle/feature_serve.png"
-                        width={403}
-                        height={333}
-                        alt="３分以内が食べごろ"
-                        className="media__img fuwafuwa-a"
-                      />
+                      <FloatingAnimation delay={0.8} amount={12}>
+                        <Image
+                          src="/images/souffle/feature_serve.png"
+                          width={403}
+                          height={333}
+                          alt="３分以内が食べごろ"
+                          className="media__img"
+                        />
+                      </FloatingAnimation>
                     </FadeIn>
                     <div className="media__body mt-3">
                       <p className="feature__sholder flex justify-center text-sm text-secondary">
