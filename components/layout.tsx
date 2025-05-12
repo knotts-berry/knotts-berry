@@ -78,8 +78,7 @@ export default function Layout({ children, title, description, home }: Props) {
         <Footer />
       </div>
 
-      {/* preline UI */}
-      <Script src="/js/hs-ui.bundle.js" strategy="afterInteractive" />
+      {/* Prelineプラグインの使用をやめて、素のTailwind CSSを使用 */}
     </>
   );
 }
