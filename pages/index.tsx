@@ -363,12 +363,12 @@ const Home: NextPage = () => {
                       コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
                     </p>
                     <div className="hs-tooltip" data-hs-tooltip-trigger="hover">
-                      <a
-                        className="hs-tooltip-toggle mt-2 flex justify-center text-sm font-bold"
-                        href={undefined}
+                      <button
+                        type="button"
+                        className="hs-tooltip-toggle mt-2 flex w-full justify-center text-sm font-bold"
                       >
                         » ドリンクメニューを見る
-                      </a>
+                      </button>
                       <div
                         className="hs-tooltip-content border-1 invisible absolute z-10 inline-block max-w-xs rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
                         role="tooltip"
@@ -824,6 +824,7 @@ const Home: NextPage = () => {
                 </p>
                 <div className="embed-container mt-8">
                   <iframe
+                    title="Google Maps"
                     src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3275.1814514062803!2d135.41077131560328!3d34.82653007550028!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x6000f729e9167133%3A0x59dbbcbb7a653741!2z44CSNjY2LTAwMzMg5YW15bqr55yM5bed6KW_5biC5qCE55S677yS77yV4oiS77yR!5e0!3m2!1sja!2sjp!4v1570938894632!5m2!1sja!2sjp"
                     width="600"
                     height="450"
