@@ -9,7 +9,7 @@ const SiteLogo = ({ home }: Props) => {
   return (
     <>
       {home ? (
-        <h1 className="site-title order-2 text-center text-xs font-normal" aria-label="Brand">
+        <h1 className="site-title order-2 flex flex-col items-center text-xs font-normal" aria-label="Brand">
           <Image
             src="/images/souffle/logo.png"
             width={168}
@@ -19,12 +19,11 @@ const SiteLogo = ({ home }: Props) => {
             priority
             quality={90}
           />
-          <br />
           スフレ専門店 ナッツベリー
         </h1>
       ) : (
-        <p className="site-title order-2 text-center text-xs font-normal" aria-label="Brand">
-          <Link href="/">
+        <p className="site-title order-2 flex flex-col items-center text-xs font-normal" aria-label="Brand">
+          <Link href="/" className="flex flex-col items-center">
             <Image
               src="/images/souffle/logo.png"
               width={140}
@@ -34,7 +33,6 @@ const SiteLogo = ({ home }: Props) => {
               priority
               quality={90}
             />
-            <br />
             スフレ専門店 ナッツベリー
           </Link>
         </p>

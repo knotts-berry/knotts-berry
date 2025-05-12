@@ -43,7 +43,7 @@ const Home: NextPage = () => {
                 );
               } else {
                 return (
-                  <div className="hero-image alignfull mt-8 text-center">
+                  <div className="hero-image alignfull mt-8 flex justify-center">
                     <Image
                       src="/images/souffle/main_lg.png"
                       width={1800}
@@ -56,7 +56,7 @@ const Home: NextPage = () => {
               }
             })()}
 
-            <p className="home-catch mt-12 text-center">
+            <p className="home-catch mt-12 flex justify-center">
               <Image
                 src="/images/souffle/top_catch.png"
                 width={280}
@@ -71,7 +71,7 @@ const Home: NextPage = () => {
             <section className="feature py-16">
               <div className="fadein-images grid flex-row gap-12 sm:grid-cols-3 sm:flex-col sm:gap-8 lg:gap-12">
                 <div className="grid__item">
-                  <div className="media--mobile-2col text-center">
+                  <div className="media--mobile-2col flex flex-col items-center">
                     <FadeIn>
                       <Image
                         src="/images/souffle/feature_dough.png"
@@ -82,10 +82,10 @@ const Home: NextPage = () => {
                       />
                     </FadeIn>
                     <div className="media__body mt-3">
-                      <p className="feature__sholder text-center text-sm text-secondary">
+                      <p className="feature__sholder flex justify-center text-sm text-secondary">
                         感動の理由 １
                       </p>
-                      <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                      <p className="feature__title mt-1 flex justify-center text-lg font-bold tracking-widest">
                         <b className="font-serif text-2xl text-primary">生地</b>
                         へのこだわり
                       </p>
@@ -96,7 +96,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="grid__item">
-                  <div className="media--mobile-2col media--mobile--inverse text-center">
+                  <div className="media--mobile-2col media--mobile--inverse flex flex-col items-center">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
                       <Image
                         src="/images/souffle/feature_bake.png"
@@ -107,10 +107,10 @@ const Home: NextPage = () => {
                       />
                     </FadeIn>
                     <div className="media__body mt-3">
-                      <p className="feature__sholder text-center text-sm text-secondary">
+                      <p className="feature__sholder flex justify-center text-sm text-secondary">
                         感動の理由 2
                       </p>
-                      <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                      <p className="feature__title mt-1 flex justify-center text-lg font-bold tracking-widest">
                         <b className="font-serif text-2xl text-primary">焼き</b>
                         へのこだわり
                       </p>
@@ -121,7 +121,7 @@ const Home: NextPage = () => {
                   </div>
                 </div>
                 <div className="grid__item">
-                  <div className="media--mobile-2col text-center">
+                  <div className="media--mobile-2col flex flex-col items-center">
                     <FadeIn delay={isMobile ? 0 : 1}>
                       <Image
                         src="/images/souffle/feature_serve.png"
@@ -132,10 +132,10 @@ const Home: NextPage = () => {
                       />
                     </FadeIn>
                     <div className="media__body mt-3">
-                      <p className="feature__sholder text-center text-sm text-secondary">
+                      <p className="feature__sholder flex justify-center text-sm text-secondary">
                         感動の理由 3
                       </p>
-                      <p className="feature__title mt-1 text-center text-lg font-bold tracking-widest">
+                      <p className="feature__title mt-1 flex justify-center text-lg font-bold tracking-widest">
                         食べごろ
                         <b className="font-serif text-2xl text-primary">３分以内</b>
                       </p>
@@ -150,8 +150,8 @@ const Home: NextPage = () => {
 
             <section id="pickup-menu" className="pickup-menu alignfull relative bg-craft py-16">
               <div className="container">
-                <div className="text-center">
-                  <h2 className="text-center text-xs font-normal tracking-wide">
+                <div className="flex flex-col items-center">
+                  <h2 className="flex flex-col items-center text-xs font-normal tracking-wide">
                     <Image
                       src="/images/souffle/header_menu.png"
                       width={98}
@@ -159,7 +159,6 @@ const Home: NextPage = () => {
                       alt="Menu"
                       className="header-above-image"
                     />
-                    <br />
                     スフレ メニュー
                   </h2>
                   <p className="mt-8">
@@ -175,7 +174,7 @@ const Home: NextPage = () => {
                 <div className="mt-8 grid gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-0 lg:grid-cols-4">
                   <div className="grid__item">
                     <FadeIn>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_cheese.jpg"
                           width={450}
@@ -183,19 +182,19 @@ const Home: NextPage = () => {
                           alt="チーズスフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       チーズスフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 830円/セット1,300円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 830円/セット1,300円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       甘さを抑えたさわやかスフレです。デンマーク産の高級クリームチーズをたっぷり使った自慢の逸品です。
                     </p>
                   </div>
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.25}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_chocolate.jpg"
                           width={450}
@@ -203,19 +202,19 @@ const Home: NextPage = () => {
                           alt="ショコラスフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       ショコラスフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 900円/セット1,370円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 900円/セット1,370円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       思わず笑みがこぼれちゃう！チョコレートシロップはこだわりの純チョコレート。高品質カカオ64%使用で、ちょっぴり大人な味です。
                     </p>
                   </div>
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_maple.jpg"
                           width={450}
@@ -223,12 +222,12 @@ const Home: NextPage = () => {
                           alt="メープルスフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       メープルスフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 880円/セット1,350円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 880円/セット1,350円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       メープル好きにはたまらない！メープルをたっぷり入れて焼き上げた風味豊かな優しい味のスフレです。
                     </p>
@@ -236,7 +235,7 @@ const Home: NextPage = () => {
 
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.75}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_yuzu.jpg"
                           width={450}
@@ -244,19 +243,19 @@ const Home: NextPage = () => {
                           alt="柚子スフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       柚子スフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 880円/セット1,350円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 880円/セット1,350円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       さわやかな柚子の香りと甘さが◎。林檎のジュレとコンポートをトッピング！
                     </p>
                   </div>
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_parmigiano.jpg"
                           width={450}
@@ -264,12 +263,12 @@ const Home: NextPage = () => {
                           alt="パルジャミーノスフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       パルジャミーノスフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 900円/セット1,370円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 900円/セット1,370円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       イタリアチーズの王様！チーズの塩見とハチミツの甘みがクセになります！
                     </p>
@@ -277,7 +276,7 @@ const Home: NextPage = () => {
                   {/* TODO: 差替え：ショコラ / 追加：柚子、メープル、パルミジャーノ、ラムレーズン、サンドイッチやトーストも？ / 季節追加？ 極ショコラ
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.75}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_plate-berry.jpg"
                           width={450}
@@ -285,12 +284,12 @@ const Home: NextPage = () => {
                           alt="プレート ベリースフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       プレート ベリースフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">
+                    <p className="menu__price flex justify-center text-xs">
                       単品 930円/セット1,400円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
@@ -301,7 +300,7 @@ const Home: NextPage = () => {
                   </div>
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/souffle_plate-tea.jpg"
                           width={450}
@@ -309,12 +308,12 @@ const Home: NextPage = () => {
                           alt="プレート 紅茶スフレ"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       プレート 紅茶スフレ
                     </h3>
-                    <p className="menu__price text-center text-xs">
+                    <p className="menu__price flex justify-center text-xs">
                       単品 930円/セット1,400円
                     </p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
@@ -326,46 +325,46 @@ const Home: NextPage = () => {
                   */}
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1.25}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/mix-sandwitch.jpg"
                           width={450}
                           height={300}
-                          alt="ワンプレートミックスサンド"
+                          alt="ミックスサンド"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       ワンプレートミックスサンド
                     </h3>
-                    <p className="menu__price text-center text-xs">単品 800円/セット1,270円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 800円/セット1,270円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他にミックスサンド、チキンサンド、オムサンド、ワンプレートチキンサンドがございます。
                     </p>
                   </div>
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1.5}>
-                      <p className="image-with-border">
+                      <div className="image-with-border flex justify-center">
                         <Image
                           src="/images/souffle/hot-chocolate.jpg"
                           width={450}
                           height={300}
-                          alt="ドリンクメニュー"
+                          alt="ホットチョコレート"
                           className="souffle-item rounded-lg"
                         />
-                      </p>
+                      </div>
                     </FadeIn>
-                    <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       ドリンクメニュー
                     </h3>
-                    <p className="menu__price text-center text-xs">530円〜</p>
+                    <p className="menu__price flex justify-center text-xs">530円〜</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       コーヒー、紅茶、ハーブティ、ジュース、フロートなど、多種多様のドリンクを提供しています。
                     </p>
                     <div className="hs-tooltip" data-hs-tooltip-trigger="hover">
                       <a
-                        className="hs-tooltip-toggle mt-2 block text-center text-sm font-bold"
+                        className="hs-tooltip-toggle mt-2 flex justify-center text-sm font-bold"
                         href={undefined}
                       >
                         » ドリンクメニューを見る
@@ -374,7 +373,7 @@ const Home: NextPage = () => {
                         className="hs-tooltip-content border-1 invisible absolute z-10 inline-block max-w-xs rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left opacity-0 shadow-md transition-opacity hs-tooltip-shown:visible hs-tooltip-shown:opacity-100"
                         role="tooltip"
                       >
-                        <span className="block px-4 pt-4 text-center text-lg font-bold tracking-wider text-primary underline">
+                        <span className="px-4 pt-4 flex justify-center text-lg font-bold tracking-wider text-primary underline">
                           Drink Menu
                         </span>
                         <div className="py-3 px-4 text-gray-600">
@@ -421,7 +420,7 @@ const Home: NextPage = () => {
                       </p>
                     </FadeIn>
                     <div className="p-2">
-                      <h3 className="menu__title mt-2 text-center text-lg text-primary">
+                      <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                         ドリンク付きセットメニュー
                       </h3>
                       <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
@@ -453,7 +452,7 @@ const Home: NextPage = () => {
 
             <section id="takeout" className="takeout py-16">
               <div className="container px-0">
-                <h2 className="header-deco text-center text-xs font-normal tracking-wide">
+                <h2 className="header-deco flex flex-col items-center text-xs font-normal tracking-wide">
                   <Image
                     src="/images/souffle/header_takeout.png"
                     width={147}
@@ -461,11 +460,10 @@ const Home: NextPage = () => {
                     alt="Takeout"
                     className="header-above-image"
                   />
-                  <br />
                   テイクアウト・配達
                 </h2>
                 <div className="mt-10 items-center lg:grid lg:grid-cols-5 lg:gap-12">
-                  <div className="col-span-3 text-center">
+                  <div className="col-span-3 flex flex-col items-center">
                     <div className="takeout-images mx-auto max-w-xl">
                       <FadeIn>
                         <Image
@@ -543,7 +541,7 @@ const Home: NextPage = () => {
             <hr className="border-dashed border-t-primary-100" />
 
             <section id="voice" className="voice alignfull relative bg-dots2 py-16">
-              <h2 className="header-deco text-center text-xs font-normal tracking-wide">
+              <h2 className="header-deco flex flex-col items-center text-xs font-normal tracking-wide">
                 <Image
                   src="/images/souffle/header_voice.png"
                   width={107}
@@ -551,10 +549,9 @@ const Home: NextPage = () => {
                   alt="Voice"
                   className="header-above-image"
                 />
-                <br />
                 お客様の声
               </h2>
-              <p className="mt-3 text-center">お客様からいただいた声の一部を紹介します！</p>
+              <p className="mt-3 flex justify-center">お客様からいただいた声の一部を紹介します！</p>
 
               <div className="container mx-auto max-w-4xl px-6">
                 <div className="voice__article mt-5 rounded-2xl border-4 border border-dotted border-primary-200 bg-white/75 p-4">
@@ -654,8 +651,8 @@ const Home: NextPage = () => {
             <section id="instagram" className="instagram py-16">
               <div className="container">
                 <div className="md:grid md:grid-cols-2 md:items-center md:gap-12 lg:grid-cols-5">
-                  <div className="order-1 text-center md:order-2 lg:col-span-2">
-                    <h2 className="header-deco mb-8 text-xs font-normal tracking-wide">
+                  <div className="order-1 flex flex-col items-center md:order-2 lg:col-span-2">
+                    <h2 className="header-deco mb-8 flex flex-col items-center text-xs font-normal tracking-wide">
                       <Image
                         src="/images/souffle/header_instagram.png"
                         width={172}
@@ -663,17 +660,18 @@ const Home: NextPage = () => {
                         alt="Instagram"
                         className="header-above-image"
                       />
-                      <br />
                       ギャラリー
                     </h2>
 
-                    <Image
-                      src="/images/souffle/instagram-profile.jpg"
-                      width={100}
-                      height={100}
-                      alt="ナッツベリー"
-                      className="rounded-full"
-                    />
+                    <div className="flex justify-center">
+                      <Image
+                        src="/images/souffle/instagram-profile.jpg"
+                        width={100}
+                        height={100}
+                        alt="ナッツベリー"
+                        className="rounded-full"
+                      />
+                    </div>
                     <p>
                       <b>
                         <a
@@ -774,7 +772,7 @@ const Home: NextPage = () => {
               <div className="container">
                 <div className="lg:grid lg:grid-cols-5 lg:items-center lg:gap-12">
                   <div className="lg:col-span-2">
-                    <h2 className="header-deco mb-8 text-center text-xs font-normal tracking-wide">
+                    <h2 className="header-deco mb-8 flex flex-col items-center text-xs font-normal tracking-wide">
                       <Image
                         src="/images/souffle/header_about.png"
                         width={88}
@@ -782,7 +780,6 @@ const Home: NextPage = () => {
                         alt="About"
                         className="header-above-image"
                       />
-                      <br />
                       ナッツベリーについて
                     </h2>
                     <p className="mt-6 font-bold leading-8 tracking-wider text-primary-600">
@@ -794,7 +791,7 @@ const Home: NextPage = () => {
                       『麗しのサブリナ』で、タカラジェンヌのトップスターが、スフレづくりのシーンを参考するために、ナッツベリーを訪問見学されました。
                     </p>
                   </div>
-                  <div className="mt-8 px-6 text-center lg:col-span-3 lg:mt-0">
+                  <div className="mt-8 flex justify-center px-6 lg:col-span-3 lg:mt-0">
                     <FadeIn delay={isMobile ? 0 : 0.5}>
                       <Image
                         src="/images/souffle/shop-images.jpg"
@@ -812,7 +809,7 @@ const Home: NextPage = () => {
 
             <section id="access" className="alignfull bg-leaf access relative py-16">
               <div className="md:container">
-                <h2 className="header-deco text-center text-xs font-normal tracking-wide">
+                <h2 className="header-deco flex flex-col items-center text-xs font-normal tracking-wide">
                   <Image
                     src="/images/souffle/header_access.png"
                     width={130}
@@ -820,10 +817,9 @@ const Home: NextPage = () => {
                     alt="Access"
                     className="header-above-image"
                   />
-                  <br />
                   アクセス
                 </h2>
-                <p className="mt-5 text-center">
+                <p className="mt-5 flex justify-center">
                   ナッツベリーの店舗は、阪急川西能勢口駅より徒歩２分、JR川西池田駅より徒歩４分の「アステ川西」２階にあります。
                 </p>
                 <div className="embed-container mt-8">
@@ -835,7 +831,7 @@ const Home: NextPage = () => {
                     allowFullScreen={false}
                   ></iframe>
                 </div>
-                <p className="mt-1 text-center">
+                <p className="mt-1 flex justify-center">
                   <small>
                     <a
                       href="https://goo.gl/maps/ZmQsXe6CbTe4kv9S6"
