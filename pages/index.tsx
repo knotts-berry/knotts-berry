@@ -194,7 +194,7 @@ const Home: NextPage = () => {
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       チーズスフレ
                     </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 830円/セット1,300円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 850円/セット1,330円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       甘さを抑えたさわやかスフレです。デンマーク産の高級クリームチーズをたっぷり使った自慢の逸品です。
                     </p>
@@ -214,7 +214,7 @@ const Home: NextPage = () => {
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       ショコラスフレ
                     </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 900円/セット1,370円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 980円/セット1,450円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       思わず笑みがこぼれちゃう！チョコレートシロップはこだわりの純チョコレート。高品質カカオ64%使用で、ちょっぴり大人な味です。
                     </p>
@@ -234,13 +234,13 @@ const Home: NextPage = () => {
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
                       メープルスフレ
                     </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 880円/セット1,350円</p>
+                    <p className="menu__price flex justify-center text-xs">単品 930円/セット1,400円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       メープル好きにはたまらない！メープルをたっぷり入れて焼き上げた風味豊かな優しい味のスフレです。
                     </p>
                   </div>
 
-                  <div className="grid__item">
+                  {/* <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.75}>
                       <div className="image-with-border flex justify-center">
                         <Image
@@ -279,7 +279,7 @@ const Home: NextPage = () => {
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       イタリアチーズの王様！チーズの塩見とハチミツの甘みがクセになります！
                     </p>
-                  </div>
+                  </div> */}
                   {/* TODO: 差替え：ショコラ / 追加：柚子、メープル、パルミジャーノ、ラムレーズン、サンドイッチやトーストも？ / 季節追加？ 極ショコラ
                   <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 0.75}>
@@ -469,7 +469,7 @@ const Home: NextPage = () => {
                     alt="Takeout"
                     className="header-above-image"
                   />
-                  テイクアウト・配達
+                  テイクアウト
                 </h2>
                 <div className="mt-10 items-center lg:grid lg:grid-cols-5 lg:gap-12">
                   <div className="col-span-3 flex flex-col items-center">
@@ -534,15 +534,7 @@ const Home: NextPage = () => {
                     </ul>
                     */}
 
-                    <div className="mt-5 rounded-lg border border-dashed border-secondary-300 py-3 px-5">
-                      <p>
-                        <b className="text-sm">配達料無料！</b>
-                      </p>
-                      <h3 className="text-lg text-secondary">お近くならデリバリーいたします！</h3>
-                      <p>
-                        店舗の近くであれば、サンドイッチを配達でお届けすることも可能です。詳細は店舗までお電話ください。
-                      </p>
-                    </div>
+                    
                   </div>
                 </div>
               </div>
