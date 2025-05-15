@@ -61,7 +61,7 @@ const Recruit: NextPage = () => {
               <h3 className="mt-3 text-lg text-primary">雇用形態</h3>
               <p>アルバイト・パート</p>
               <h3 className="mt-3 text-lg text-primary">勤務時間</h3>
-              <ul className="list-disc list-square pl-4 marker:text-secondary-300">
+              <ul className="list-square pl-4 marker:text-secondary-300">
                 <li>8:30～21:30 (シフト交代制)</li>
                 <li>週5日以上のレギュラー勤務歓迎</li>
                 <li>時間・曜日応相談</li>
@@ -70,7 +70,7 @@ const Recruit: NextPage = () => {
               <h3 className="mt-3 text-lg text-primary">給与</h3>
               <p>時給 1,100円以上</p>
               <h3 className="mt-3 text-lg text-primary">その他</h3>
-              <ul className="list-disc list-square pl-4 marker:text-secondary-300">
+              <ul className="list-square pl-4 marker:text-secondary-300">
                 <li>交通費支給</li>
                 <li>制服貸与</li>
                 <li>高校生不可</li>
