@@ -15,7 +15,7 @@ const Recruit: NextPage = () => {
         animate={{ opacity: 1 }} // on mount
         exit={{ opacity: 0 }} // on unmount
       >
-        <p className="text-center">
+        <div className="flex justify-center mt-8">
           <Image
             src="/images/souffle/img_kitchen.jpg"
             width={800}
@@ -23,8 +23,8 @@ const Recruit: NextPage = () => {
             alt="カフェ ナッツベリーのキッチン"
             className="rounded-xl"
           />
-        </p>
-        {/* <p className="text-center">
+        </div>
+        <div className="flex justify-center mt-8">
           <Image
             src="/images/souffle/recruit_catch.png"
             width={242}
@@ -32,9 +32,9 @@ const Recruit: NextPage = () => {
             alt="わたしたちと一緒に働きませんか？"
             className="rounded-xl"
           />
-        </p> */}
-        <p className="text-center mb-10">現在は募集しておりません。</p>
-        {/* <p className="lead mx-auto mt-4 max-w-xl text-center text-primary-700">
+        </div>
+        {/* <p className="text-center mb-10">現在は募集しておりません。</p> */}
+        <p className="lead mx-auto mt-4 max-w-xl text-center text-primary-700">
           現在、スフレ専門店
           ナッツベリーでは、以下の職種を募集しています。面接ご希望の方は、電話又は
           <Link href="inquiry" className="text-primary-400 no-underline">お問合せフォーム</Link>{" "}
@@ -53,42 +53,46 @@ const Recruit: NextPage = () => {
           <h2 className="header-deco text-center text-lg tracking-widest">
             募集要項
           </h2>
-          <div className="mt-10 lg:grid lg:grid-cols-2 lg:gap-10">
-            <div>
-              <div className="rounded-xl border border-dashed border-primary-200 bg-white/50 p-4 md:p-8">
-                <h3 className="text-lg text-primary">職種</h3>
-                <p>ホール・キッチンスタッフ</p>
-                <h3 className="mt-3 text-lg text-primary">雇用形態</h3>
-                <p>アルバイト・パート</p>
-                <h3 className="mt-3 text-lg text-primary">勤務時間</h3>
-                <ul className="list-disc list-square pl-4 marker:text-secondary-300">
-                  <li>8:30～21:30 (シフト交代制)</li>
-                  <li>週5日以上のレギュラー勤務歓迎</li>
-                  <li>時間・曜日応相談</li>
-                  <li>1日5h～、週3・4日の勤務もOK</li>
-                </ul>
-                <h3 className="mt-3 text-lg text-primary">給与</h3>
-                <p>日祝 1,050円～、平日 1,000円～</p>
-              </div>
+          
+          <div className="flex flex-col gap-6 max-w-2xl mx-auto mt-10">
+            <div className="rounded-xl border border-dashed border-primary-200 bg-white/50 p-4 md:p-8">
+              <h3 className="text-lg text-primary">職種</h3>
+              <p>ホール・キッチンスタッフ</p>
+              <h3 className="mt-3 text-lg text-primary">雇用形態</h3>
+              <p>アルバイト・パート</p>
+              <h3 className="mt-3 text-lg text-primary">勤務時間</h3>
+              <ul className="list-disc list-square pl-4 marker:text-secondary-300">
+                <li>8:30～21:30 (シフト交代制)</li>
+                <li>週5日以上のレギュラー勤務歓迎</li>
+                <li>時間・曜日応相談</li>
+                <li>1日5h～、週3・4日の勤務もOK</li>
+              </ul>
+              <h3 className="mt-3 text-lg text-primary">給与</h3>
+              <p>時給 1,100円以上</p>
+              <h3 className="mt-3 text-lg text-primary">その他</h3>
+              <ul className="list-disc list-square pl-4 marker:text-secondary-300">
+                <li>交通費支給</li>
+                <li>制服貸与</li>
+                <li>高校生不可</li>
+              </ul>
             </div>
-            <div className="mt-lg-0 mt-4">
-              <div className="rounded bg-craft p-5 text-center shadow">
-                <h2 className="text-lg text-primary">
-                  電話かメールフォームから
-                  <br />
-                  お問合せください
-                </h2>
-                <p className="mt-2 text-2xl">
-                  <b>072-755-2254</b>
-                </p>
-                <p className="mt-0">受付時間 9:00～21:00</p>
-                <Link href="inquiry" className="btn btn-primary mt-3 rounded">
-                  お問合せフォーム
-                </Link>
-              </div>
+            
+            <div className="rounded bg-craft p-5 text-center shadow">
+              <h2 className="text-lg text-primary">
+                電話かメールフォームから
+                <br />
+                お問合せください
+              </h2>
+              <p className="mt-2 text-2xl">
+                <b>072-755-2254</b>
+              </p>
+              <p className="mt-0">受付時間 9:00～21:00</p>
+              <Link href="inquiry" className="btn btn-primary mt-3 rounded">
+                お問合せフォーム
+              </Link>
             </div>
           </div>
-        </section> */}
+        </section>
       </motion.div>
     </Layout>
   );
