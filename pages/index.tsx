@@ -168,17 +168,105 @@ const Home: NextPage = () => {
                     />
                     スフレ メニュー
                   </h2>
-                  <p className="mt-8">
-                    ご注文をいただいてから作りますので、焼き上がりまで15〜20分ちょうだいいたします。
-                  </p>
-                  <p className="mt-0 text-sm">(混雑時にはさらにお時間がかかる場合があります)</p>
-
-                  <p className="inline-block bg-white px-3 text-xs text-primary">
+                  <p className="inline-block bg-white mt-3 px-3 text-xs text-primary">
                     アレルギー表示：卵、小麦、乳、一部落花生
                   </p>
+
+                  <div className="mt-8 p-4 bg-white shadow max-w-lg mx-auto rounded-lg">
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
+                      ドリンク付きセットメニュー
+                    </h3>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      セットメニューには、コーヒー、紅茶、ハーブティーのいずれかのドリンクが付きます。
+                    </p>
+                    <div className="grid__item md:flex md:flex-row gap-4">
+                      <div className="md:w-2/5 md:flex md:items-center">
+                        <p>
+                          <Image
+                            src="/images/souffle/drink-set-menu.jpg"
+                            width={450}
+                            height={300}
+                            alt="ドリンク付きのセットメニュー"
+                            className="souffle-item mx-auto rounded-lg"
+                          />
+                        </p>
+                      </div>
+                      <div className="p-2 md:w-3/5 md:flex md:flex-col md:justify-center">
+                        <ul className="mt-2 list-inside list-disc text-sm font-bold text-primary marker:text-secondary-200">
+                          <li>
+                            ホットコーヒー<small>(ライト/ミドル)</small>
+                          </li>
+                          <li>アイスコーヒー</li>
+                          <li>
+                            カフェオレ<small> (Hot/Ice)</small>
+                          </li>
+                          <li>
+                            カフェラテ<small> (Hot/Ice)</small>
+                          </li>
+                          <li>
+                            本日の紅茶<small> (Hot/Ice)</small>
+                          </li>
+                          <li>
+                            ハーブティー<small> (Hot のみ)</small>
+                          </li>
+                        </ul>
+                      </div>
+                    </div>
+                  </div>
+
+                </div>
+                <div className="flex flex-col items-center max-w-md mx-auto">
+                  <h3 className="text-center mt-12 text-xl font-bold tracking-widest text-primary">
+                    <small>焼きたて、ふわふわ</small><br />とろけるスフレケーキ
+                  </h3>
+                  <p className="mt-2 text-center">
+                    ご注文をいただいてから作ります。<br />焼き上がりまで15〜20分ちょうだいいたします。
+                  </p>
+                  <p className="mt-0 text-sm">(混雑時にはさらにお時間がかかる場合があります)</p>
                 </div>
 
-                <div className="mt-8 grid gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-0 lg:grid-cols-4">
+                <div className="mt-8 grid gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-0">
+                  <div className="grid__item">
+                    <FadeIn>
+                      <div className="image-with-border flex justify-center">
+                        <Image
+                          src="/images/souffle/souffle_strawberry.jpg"
+                          width={450}
+                          height={300}
+                          alt="いちごのスフレケーキ"
+                          className="souffle-item rounded-lg"
+                        />
+                      </div>
+                    </FadeIn>
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
+                      いちごのスフレケーキ
+                    </h3>
+                    <p className="menu__price flex justify-center text-xs">単品 960円/セット1,430円</p>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      いちご農園ICHIJYUさんのジャムをたっぷり使った季節限定のスフレ。
+                    </p>
+                  </div>
+                  <div className="grid__item">
+                    <FadeIn>
+                      <div className="image-with-border flex justify-center">
+                        <Image
+                          src="/images/souffle/souffle_apple.jpg"
+                          width={450}
+                          height={300}
+                          alt="りんごのスフレケーキ"
+                          className="souffle-item rounded-lg"
+                        />
+                      </div>
+                    </FadeIn>
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
+                      りんごのスフレケーキ
+                    </h3>
+                    <p className="menu__price flex justify-center text-xs">単品 960円/セット1,430円</p>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      自家製りんごジャムをたっぷり使った冬限定のスフレ。
+                    </p>
+                  </div>
+
                   <div className="grid__item">
                     <FadeIn>
                       <div className="image-with-border flex justify-center">
@@ -239,98 +327,76 @@ const Home: NextPage = () => {
                       メープル好きにはたまらない！メープルをたっぷり入れて焼き上げた風味豊かな優しい味のスフレです。
                     </p>
                   </div>
+                </div>
 
-                  {/* <div className="grid__item">
-                    <FadeIn delay={isMobile ? 0 : 0.75}>
+                <div className="flex flex-col items-center mt-12 max-w-md mx-auto">
+                  <h3 className="text-center mt-8 text-xl font-bold tracking-widest text-primary">
+                    <small>お待たせしない</small><br />「しっとり」スフレケーキ
+                  </h3>
+                  <p className="mt-2 text-center">
+                    あらかじめ焼き上げたスフレケーキにアイスを添えて。<br />
+                    しっとり食感をお楽しみください。
+                  </p>
+                  <p className="mt-0 text-sm font-bold">(12:00から提供開始 数量限定／なくなり次第終了)</p>
+                </div>
+
+                <div className="mt-8 grid gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-0">
+
+                  <div className="grid__item">
+                    <FadeIn delay={isMobile ? 0 : 0.5}>
                       <div className="image-with-border flex justify-center">
                         <Image
-                          src="/images/souffle/souffle_yuzu.jpg"
+                          src="/images/souffle/souffle_sittori_strawberry.jpg"
                           width={450}
                           height={300}
-                          alt="柚子スフレ"
+                          alt="『いちご農園ICHIJYU』コラボスフレ"
                           className="souffle-item rounded-lg"
                         />
                       </div>
                     </FadeIn>
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      柚子スフレ
+                      『いちご農園ICHIJYU』コラボスフレ(季節限定)
+                    </h3>
+                    <p className="menu__price flex justify-center text-xs">単品 1,010円/セット1,480円</p>
+                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
+                      いちご農園ICHIJYUさんのジャムをたっぷり使ったプレミアムいちごスフレ。1日10食限定販売となりますので、お早めにご来店ください。
+                    </p>
+                  </div>
+<div className="grid__item">
+                    <FadeIn delay={isMobile ? 0 : 0.5}>
+                      <div className="image-with-border flex justify-center">
+                        <Image
+                          src="/images/souffle/souffle_sittori_cheeze_chocola.jpg"
+                          width={450}
+                          height={300}
+                          alt="チーズスフレケーキ チョコレートソース"
+                          className="souffle-item rounded-lg"
+                        />
+                      </div>
+                    </FadeIn>
+                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
+                      チーズスフレケーキ 〜 チョコレートソース
                     </h3>
                     <p className="menu__price flex justify-center text-xs">単品 880円/セット1,350円</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      さわやかな柚子の香りと甘さが◎。林檎のジュレとコンポートをトッピング！
+                      濃厚なチーズスフレに、ベルギー産チョコレートソースをとろりとかけて仕上げました。チーズのコクとチョコのほろ苦さが絶妙にマッチした贅沢な一皿です。
                     </p>
                   </div>
-                  <div className="grid__item">
-                    <FadeIn delay={isMobile ? 0 : 1}>
-                      <div className="image-with-border flex justify-center">
-                        <Image
-                          src="/images/souffle/souffle_parmigiano.jpg"
-                          width={450}
-                          height={300}
-                          alt="パルジャミーノスフレ"
-                          className="souffle-item rounded-lg"
-                        />
-                      </div>
-                    </FadeIn>
-                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      パルジャミーノスフレ
-                    </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 900円/セット1,370円</p>
-                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      イタリアチーズの王様！チーズの塩見とハチミツの甘みがクセになります！
-                    </p>
-                  </div> */}
-                  {/* TODO: 差替え：ショコラ / 追加：柚子、メープル、パルミジャーノ、ラムレーズン、サンドイッチやトーストも？ / 季節追加？ 極ショコラ
-                  <div className="grid__item">
-                    <FadeIn delay={isMobile ? 0 : 0.75}>
-                      <div className="image-with-border flex justify-center">
-                        <Image
-                          src="/images/souffle/souffle_plate-berry.jpg"
-                          width={450}
-                          height={300}
-                          alt="プレート ベリースフレ"
-                          className="souffle-item rounded-lg"
-                        />
-                      </div>
-                    </FadeIn>
-                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      プレート ベリースフレ
-                    </h3>
-                    <p className="menu__price flex justify-center text-xs">
-                      単品 930円/セット1,400円
-                    </p>
-                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      カシスの甘ずっぱさがたまらない爽やかなスフレ。ちょっと贅沢なプレートで。あたたかいスフレを冷たいアイスクリームと一緒に。
-                      <br />
-                      <small>※季節によりスフレが変わります</small>
-                    </p>
-                  </div>
-                  <div className="grid__item">
-                    <FadeIn delay={isMobile ? 0 : 1}>
-                      <div className="image-with-border flex justify-center">
-                        <Image
-                          src="/images/souffle/souffle_plate-tea.jpg"
-                          width={450}
-                          height={300}
-                          alt="プレート 紅茶スフレ"
-                          className="souffle-item rounded-lg"
-                        />
-                      </div>
-                    </FadeIn>
-                    <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      プレート 紅茶スフレ
-                    </h3>
-                    <p className="menu__price flex justify-center text-xs">
-                      単品 930円/セット1,400円
-                    </p>
-                    <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      紅茶の香りが広がる大人の味。オーガニックの紅茶を使ったこだわりの一品です。あたたかいスフレを冷たいアイスクリームと一緒に。
-                      <br />
-                      <small>※季節によりスフレが変わります</small>
-                    </p>
-                  </div>
-                  */}
-                  <div className="grid__item">
+                </div>
+
+                <div className="flex flex-col items-center mt-12 max-w-md mx-auto">
+                  <h3 className="text-center mt-8 text-xl font-bold tracking-widest text-primary">
+                    サンドイッチ、ドリンクメニュー
+                  </h3>
+                  <p className="mt-2 text-center">
+                    美味しいサンドイッチやドリンクなどをご用意しております。<br />
+                    ゆったりとした店内で、くつろぎの一時をお過ごしください。
+                  </p>
+                </div>
+
+                <div className="mt-8 grid gap-8 px-4 sm:grid-cols-2 md:grid-cols-3 md:px-0">
+
+                                    <div className="grid__item">
                     <FadeIn delay={isMobile ? 0 : 1.25}>
                       <div className="image-with-border flex justify-center">
                         <Image
@@ -380,7 +446,7 @@ const Home: NextPage = () => {
                       <div
                         className="invisible opacity-0 group-hover:visible group-hover:opacity-100 absolute left-1/2 z-10 bottom-full mb-2 -translate-x-1/2 transform rounded-lg border border-dashed border-primary-200 bg-white bg-paper text-left shadow-md transition-opacity duration-300"
                         role="tooltip"
-                        style={{ minWidth: '280px' }}
+                        style={{ minWidth: '360px' }}
                       >
                         <div className="px-4 pt-4 flex justify-center text-lg font-bold tracking-wider text-primary underline">
                           Drink Menu
@@ -414,45 +480,6 @@ const Home: NextPage = () => {
                           </dl>
                         </div>
                       </div>
-                    </div>
-                  </div>
-                  <div className="grid__item bg-white shadow">
-                    <FadeIn delay={isMobile ? 0 : 1.75}>
-                      <p>
-                        <Image
-                          src="/images/souffle/drink-set-menu.jpg"
-                          width={450}
-                          height={300}
-                          alt="ドリンク付きのセットメニュー"
-                          className="souffle-item"
-                        />
-                      </p>
-                    </FadeIn>
-                    <div className="p-2">
-                      <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                        ドリンク付きセットメニュー
-                      </h3>
-                      <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                        セットメニューには、コーヒー、紅茶、ハーブティーのいずれかのドリンクが付きます。
-                      </p>
-                      <ul className="mt-2 list-inside list-disc text-sm font-bold text-primary marker:text-secondary-200">
-                        <li>
-                          ホットコーヒー<small>(ライト/ミドル)</small>
-                        </li>
-                        <li>アイスコーヒー</li>
-                        <li>
-                          カフェオレ<small> (Hot/Ice)</small>
-                        </li>
-                        <li>
-                          カフェラテ<small> (Hot/Ice)</small>
-                        </li>
-                        <li>
-                          本日の紅茶<small> (Hot/Ice)</small>
-                        </li>
-                        <li>
-                          ハーブティー<small> (Hot のみ)</small>
-                        </li>
-                      </ul>
                     </div>
                   </div>
                 </div>
