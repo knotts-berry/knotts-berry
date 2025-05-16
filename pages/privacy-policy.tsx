@@ -6,7 +6,7 @@ const PrivacyPolicy: NextPage = () => {
   return (
     <Layout
       title="個人情報保護方針(プライバシーポリシー)"
-      description="川西市 アステ川西内のカフェ「スフレ専門店 ナッツベリー」の求人情報"
+      description="川西市 アステ川西内のカフェ「スフレ専門店 ナッツベリー」のプライバシーポリシー"
     >
       <motion.div
         initial={{ opacity: 0 }} // initial
@@ -89,7 +89,7 @@ const PrivacyPolicy: NextPage = () => {
               兵庫県川西市栄町25番1号 アステ川西TENPO175 248号
             </p>
             <p className="mt-0">Tel：072-755-2254</p>
-            <p className="mt-0">個人情報苦情・相談窓口責任者 望月 潔</p>
+            <p className="mt-0">個人情報苦情・相談窓口責任者 望月 稔也</p>
           </div>
         </section>
       </motion.div>

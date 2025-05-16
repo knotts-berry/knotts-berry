@@ -35,7 +35,7 @@ const Inquiry: NextPage = () => {
             <p className="mt-2 text-2xl">
               <b>072-755-2254</b>
             </p>
-            <p className="mt-0">受付時間 10:00～19:00</p>
+            <p className="mt-0">受付時間 10:00～20:00</p>
           </div>
           <div className="mx-auto mt-8 max-w-3xl rounded bg-craft py-8 px-4 text-center shadow lg:px-8">
             <h3 className="text-lg text-primary">お問合せフォーム</h3>

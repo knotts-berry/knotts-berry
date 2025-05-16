@@ -37,9 +37,9 @@ const Footer = () => {
                     </a>
                   </b>
                   <br />
-                  営業時間 <b className="text-lg">10:00～19:00</b>
+                  営業時間 <b className="text-lg">10:00～20:00</b>
                 </p>
-                <p className="mt-0 text-xs">ラストオーダー 18:30</p>
+                <p className="mt-0 text-xs">ラストオーダー 19:30 (スフレは19:15)</p>
                 休業日{' '}
                 <a
                   href="https://www.astekawanishi.com/sales/"

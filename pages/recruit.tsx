@@ -62,7 +62,6 @@ const Recruit: NextPage = () => {
               <p>アルバイト・パート</p>
               <h3 className="mt-3 text-lg text-primary">勤務時間</h3>
               <ul className="list-square pl-4 marker:text-secondary-300">
-                <li>8:30～21:30 (シフト交代制)</li>
                 <li>週5日以上のレギュラー勤務歓迎</li>
                 <li>時間・曜日応相談</li>
                 <li>1日5h～、週3・4日の勤務もOK</li>
