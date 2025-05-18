@@ -375,9 +375,9 @@ const Home: NextPage = () => {
                       </div>
                     </FadeIn>
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      チーズスフレケーキ 〜 チョコレートソース
+                      しっとりプレミアムスフレ
                     </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 880円/セット1,350円</p>
+                    <p className="menu__price flex justify-center text-xs">880円〜</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
                       濃厚なチーズスフレに、ベルギー産チョコレートソースをとろりとかけて仕上げました。チーズのコクとチョコのほろ苦さが絶妙にマッチした贅沢な一皿です。
                     </p>
@@ -409,11 +409,11 @@ const Home: NextPage = () => {
                       </div>
                     </FadeIn>
                     <h3 className="menu__title mt-2 flex justify-center text-lg text-primary">
-                      ワンプレートミックスサンド
+                      ハーフミックスサンド
                     </h3>
-                    <p className="menu__price flex justify-center text-xs">単品 800円/セット1,270円</p>
+                    <p className="menu__price flex justify-center text-xs">800円〜</p>
                     <p className="menu__body mt-2 text-sm leading-relaxed tracking-widest">
-                      スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他にミックスサンド、チキンサンド、オムサンド、ワンプレートチキンサンドがございます。
+                      スープやドレッシングも手作りにこだわった美味しいサンドイッチ。他にミックスサンド、チキンサンド、ワンプレートチキンサンドがございます。
                     </p>
                   </div>
                   <div className="grid__item">
@@ -516,7 +516,7 @@ const Home: NextPage = () => {
                   <div className="col-span-2">
                     <h3 className="text-xl tracking-widest text-primary">サンドイッチ</h3>
                     <p className="mt-2">
-                      テイクアウトのサンドイッチ３種類。セットはドリンク付き。ランチタイムやお帰りの際に、ぜひご利用くださいませ。
+                      テイクアウトのサンドイッチ2種類。セットはドリンク付き。ランチタイムやお帰りの際に、ぜひご利用くださいませ。
                     </p>
                     <p className="mt-0 text-sm">
                       (ショーケースの中に商品が無くてもお作りできますので、お気軽にお声がけ下さい)
@@ -529,10 +529,6 @@ const Home: NextPage = () => {
                       <li>
                         チキンサンド{' '}
                         <small className="font-normal">単品 760円 / セット 1,000円</small>
-                      </li>
-                      <li>
-                        オムサンド{' '}
-                        <small className="font-normal">単品 710円 / セット 1,000円</small>
                       </li>
                     </ul>
                     {/*
